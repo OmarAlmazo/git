@@ -1,0 +1,41 @@
+#### List or view your user settings
+git config --list
+"" En caso de que te muestre mucha informacion puedes salir de la terminal con la letra Q ""
+##
+git init
+"" git init se usa cuando vas a empezar un proyecto nuevo desde cero en tu máquina y quieres que Git comience a rastrear sus cambios ""
+##
+git clone <url>
+" Crea una copia local de un repositorio Git existente desde una URL remota (como GitHub, GitLab, Bitbucket). "
+#
+git status
+"Muestra el estado actual de tu directorio de trabajo, el área de preparación (staging area) y el repositorio. Te indica qué archivos han sido modificados, cuáles están en el área de preparación y cuáles no están siendo rastreados."
+#
+git add <archivo> o git add .
+"Agrega cambios al área de preparación. Esto significa que estás "preparando" esos cambios para el próximo commit."
+#
+git commit -m "Mensaje del commit"
+"Guarda los cambios que están en el área de preparación en el historial del repositorio."
+#
+git diff
+"Muestra las diferencias entre tu directorio de trabajo y el área de preparación, o entre el área de preparación y el último commit, o entre dos commits."
+#
+git log
+"Muestra el historial de commits del repositorio, incluyendo el autor, la fecha y el mensaje de cada commit."
+#
+git reset <archivo>
+"Deshace la adición de un archivo al área de preparación, pero mantiene los cambios en tu directorio de trabajo."
+#
+git checkout <commit_hash> <archivo>
+" Restaura un archivo a una versión anterior específica."
+#
+git revert <commit_hash>
+"Crea un nuevo commit que deshace los cambios introducidos por un commit anterior. Esto es útil para deshacer cambios que ya han sido compartidos con otros."
+# este comando muestra un * en la rama que esta posicionado
+git branch
+#Lista todas las ramas en tu repositorio local.
+# se pueden utilizar dos comando diferentes para crear la rama 
+git branch <nombre_rama>  git checkout -b <nombre_rama>
+"Crea una nueva rama".
+# subir una rama creada desde local debes de asegurar que te encuentras en la rama que quieres subir 
+git push -u origin <nombre-de-tu-rama>
