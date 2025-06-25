@@ -49,3 +49,25 @@ rama_local -> git branch -D <nombre-de-la-rama>
 git merge <nombre_rama>
 git checkout main
 git merge feature-login
+# Indica de donde vienen tu codigo y adonde se subira 
+# origin  https://github.com/tu-usuario/tu-repositorio.git (fetch)
+# origin  https://github.com/tu-usuario/tu-repositorio.git (push)
+git remote -v
+# Usbir cambios a remoto 
+git push <nombre_remoto> <nombre_rama>
+git push origin main
+# Descarga los cambios de un repositorio remoto, pero no los combina automáticamente con tu rama local. Te permite revisar los cambios antes de fusionarlos.
+git fetch <nombre_remoto>
+#  Descarga y combina los cambios de un repositorio remoto en tu rama local.
+git pull <nombre_remoto> <nombre_rama>
+git pull origin main
+# para salirte de la terminal de git cuando ejeucta algo es con la letra q
+# para trabajar varios sobre uns misma rama por ekemplo 
+# dvelop se requiere qeu cada quien cree una rama de trabajo 
+# rama1 suba su cambio a develop 
+# rama2 realiza sus propios cambios y despues realiza un pull para traer sus cambios resolver conflicto y subir a develop a qui podrias usar un fetch para ver que es lo que cambia respecto a tu version 
+---------
+# Para guardar un cambio y regresar tu repositorio al commit original esto es muy util para resolver bugs
+git stash 
+# para retomar lo que habias guardado temporalmente en tu remoto y aplicarlo al codigo
+git stash pop
