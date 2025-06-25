@@ -39,3 +39,11 @@ git branch <nombre_rama>  git checkout -b <nombre_rama>
 "Crea una nueva rama".
 # subir una rama creada desde local debes de asegurar que te encuentras en la rama que quieres subir 
 git push -u origin <nombre-de-tu-rama>
+# Crear una rama desde un origen despues de crearla recordar posisionarte en la rama y posteriormente subirla de local a tu repo en linea 
+git checkout -b <nombre-de-tu-nueva-rama-local> origin/<nombre-de-la-rama-remota>
+# para eliminar una rama hay dos forma elimniar la rama des local y la de remoto
+rama_remot -> git push origin --delete <nombre-de-la-rama-remota>
+rama_local -> git branch -d mi-feature-completada
+rama_local -> git branch -D <nombre-de-la-rama>
+#
+git merge <nombre_rama>
